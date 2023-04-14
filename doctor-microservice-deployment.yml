@@ -1,0 +1,30 @@
+apiVersion : apps/v1
+kind : Deployment
+metadata :
+  name : doctor-microservice-deployment
+spec :
+  selector :
+    matchLabels :
+      app : doctor-microservice-selector
+  replicas : 1
+  template :
+    metadata :
+      labels :
+        app : doctor-microservice-selector
+    spec :
+      containers :
+        - name :
+          image :
+          ports :
+            - containerPort : 8001
+              protocol : TCP
+          env :
+            - name : DB_HOST
+              value : mysql-6ffbc8f667-b5h2r
+            - name : DB_NAME
+              value : appointmentdb
+            - name : DB_USERNAME
+              value : dip@dutta
+            - name : DB_PASSWORD
+              value : dip@dutta
+  
