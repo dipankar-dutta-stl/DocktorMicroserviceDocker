@@ -20,7 +20,7 @@ spec :
               protocol : TCP
           env :
             - name : DB_HOST
-              value : mysql-6ffbc8f667-b5h2r
+              value : mysql
             - name : DB_NAME
               value : appointmentdb
             - name : DB_USERNAME
